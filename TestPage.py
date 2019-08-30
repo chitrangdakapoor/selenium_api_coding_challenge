@@ -10,7 +10,9 @@ class OrderTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        with open("Config//login.json") as config_file:
+        ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+        CONFIG_PATH = os.path.join(ROOT_DIR, 'Config//login.json')
+        with open(CONFIG_PATH) as config_file:
             config = json.load(config_file)
         cls.username = config["username"]
         cls.password = config["password"]
