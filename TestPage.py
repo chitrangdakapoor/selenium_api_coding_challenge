@@ -1,7 +1,6 @@
 from selenium import  webdriver
-from selenium.webdriver.common.action_chains import ActionChains
+import os
 import json
-import time
 import unittest
 from Pages.Login import Login
 from Pages.Order import Order
